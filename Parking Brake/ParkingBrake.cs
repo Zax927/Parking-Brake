@@ -21,7 +21,7 @@ namespace ParkingBrake
         {    
             if (_brakeKey.GetKey() && Input.GetKey(KeyCode.LeftAlt)) {
                 //ScreenMessages.PostScreenMessage("Parking brake triggered", 3);
-                FlightGlobals.ActiveVessel.ActionGroups.ToggleGroup(KSPActionGroup.Brakes);
+                FlightGlobals.ActiveVessel.ActionGroups.SetGroup(KSPActionGroup.Brakes, true);
                 fixKey = true;
             }
             if (fixKey && !_brakeKey.GetKey())
